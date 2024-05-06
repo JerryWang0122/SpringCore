@@ -29,7 +29,7 @@
     </bean>
 
     <bean id="teaBeverageMachine" class="session02.bean.BeverageMachine">
-        <!-- 方法注入 -->
+        <!-- 方法注入 setXxx -->
         <property name="beverage" ref="tea"/>
     </bean>
 </beans>
