@@ -1,5 +1,6 @@
 package session01.bean;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.LinkedHashSet;
@@ -7,6 +8,7 @@ import java.util.Random;
 import java.util.Set;
 
 @Component
+@Scope("prototype")
 public class Lotto {
     private Set<Integer> numbers;
 
