@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import session01.bean.Hello;
 import session01.bean.Lotto;
 import session01.config.SpringJavaConfig;
+import session01.config.SpringJavaConfig2;
 
 // TODO: 1200 複習老師怎麼說
 //執行時請加入 VM 參數: --add-opens java.base/java.lang=ALL-UNNAMED
@@ -12,7 +13,8 @@ import session01.config.SpringJavaConfig;
 //這是為了解決一些框架，如 Spring，在需要訪問這些封裝的API時遇到的反射問題。
 public class TestHelloAndLotto {
     public static void main(String[] args) {
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringJavaConfig.class);
+//        ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringJavaConfig.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringJavaConfig2.class);
         Hello hello = ctx.getBean("hello", Hello.class);
         System.out.println(hello.getToday());
         System.out.println("==============");

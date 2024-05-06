@@ -1,7 +1,10 @@
 package session01.bean;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
+@Component
 public class Hello {
     private Date today;
 
