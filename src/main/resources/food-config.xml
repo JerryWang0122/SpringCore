@@ -20,5 +20,6 @@
     <!-- 利用component-scan掃描 -->
     <context:component-scan base-package="session04.bean"/>
 
-
+    <!-- 匯入數據源的配置 -->
+    <import resource="classpath:jdbc-config.xml"/>
 </beans>
