@@ -47,7 +47,7 @@ public class GuestBookServiceImpl implements GuestBookService{
         if (guestBook == null) {
             return false;
         }
-        guestBook.setUserName(content);
+        guestBook.setContent(content);
         return guestBookDao.update(guestBook) == 1;
     }
 
