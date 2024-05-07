@@ -12,7 +12,7 @@ import java.util.List;
 
 // Repository 也是Component，但也同時代表他是"數據庫"資料
 // 在意義上可以更加明確(屬於Repository的Component)
-@Repository
+@Repository("gbDao")
 public class GuestBookDaoImpl implements GuestBookDao{
 
     @Autowired  // 自動綁定

@@ -1,41 +1,58 @@
 package session05.service;
 
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import session05.bean.GuestBook;
+import session05.dao.GuestBookDao;
 
 import java.util.List;
 
-//@Component
 @Service
 public class GuestBookServiceImpl implements GuestBookService{
+
+    @Autowired
+    @Qualifier("gbDao")
+    private GuestBookDao guestBookDao;
+
     @Override
     public boolean add(String userName, String content) {
-        return false;
+        GuestBook guestBook = new GuestBook(userName, content);
+        return guestBookDao.create(guestBook) == 1;
     }
 
     @Override
     public GuestBook getById(Integer id) {
-        return null;
+        return guestBookDao.findById(id);
     }
 
     @Override
     public List<GuestBook> queryAll() {
-        return null;
+        return guestBookDao.findAll();
     }
 
     @Override
     public boolean updateUsername(Integer id, String username) {
-        return false;
+        GuestBook guestBook = guestBookDao.findById(id);
+        if (guestBook == null) {
+            return false;
+        }
+        guestBook.setUserName(username);
+        return guestBookDao.update(guestBook) == 1;
     }
 
     @Override
     public boolean updateContent(Integer id, String content) {
-        return false;
+        GuestBook guestBook = guestBookDao.findById(id);
+        if (guestBook == null) {
+            return false;
+        }
+        guestBook.setUserName(content);
+        return guestBookDao.update(guestBook) == 1;
     }
 
     @Override
     public boolean removeById(Integer id) {
-        return false;
+        return guestBookDao.deleteById(id) == 1;
     }
 }
