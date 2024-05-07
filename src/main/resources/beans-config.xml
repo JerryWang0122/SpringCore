@@ -17,7 +17,7 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-    <!--  定義一個 Hello 實體，預設 scope="singleton" -->
+    <!--  定義多個 Hello 實體，預設 scope="singleton" -->
     <bean id="hello" class="session01.bean.Hello" />
     <bean id="hello2" class="session01.bean.Hello" />
 

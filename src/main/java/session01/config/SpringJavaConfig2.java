@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"session01.bean"})
 public class SpringJavaConfig2 {
     // 要掃描的類標註 @Compoment，便可以使用ComponentScan掃描路徑下的所有標注類
+    // 掃描後的類在之後可以使用配置文件，直接取得該類實體
 
     /**
      * 目前學習到：

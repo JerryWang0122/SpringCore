@@ -8,11 +8,11 @@
     <artifactId>SpringCore</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- Spring 相關配置 -->
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Spring 相關配置 -->
         <spring.version>4.3.25.RELEASE</spring.version>
     </properties>
 
