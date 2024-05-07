@@ -8,7 +8,7 @@ import session05.dao.GuestBookDao;
 
 import java.util.List;
 
-@Service
+@Service("gbService")
 public class GuestBookServiceImpl implements GuestBookService{
 
     @Autowired
