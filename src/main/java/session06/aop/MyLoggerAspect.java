@@ -1,10 +1,7 @@
 package session06.aop;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -43,6 +40,12 @@ public class MyLoggerAspect {
     @After(value = "pt2()")
     public void afterAdvice(JoinPoint joinPoint){
         System.out.printf("後置通知：%s%n", joinPoint.getSignature().getName());
+        // 不論是否發生例外，後置通知都會執行
+    }
+
+    @AfterReturning(value = "pt2()", returning = "result")
+    public void afterReturningAdvice(Object result) {
+        System.out.printf("返回通知：%s%n", result);
     }
 
 }
