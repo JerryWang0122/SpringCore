@@ -50,4 +50,9 @@ public class MyLoggerAspect {
         System.out.printf("返回通知：%s%n", result);
     }
 
+    @AfterThrowing(value = "pt2()", throwing = "ex")
+    public void afterThrowingAdvice(JoinPoint joinPoint, Exception ex) {
+        System.out.printf("異常通知：%s 發生 %s%n", joinPoint.getSignature().getName(), ex);
+    }
+
 }
