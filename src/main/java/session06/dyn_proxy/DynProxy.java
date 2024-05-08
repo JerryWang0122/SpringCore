@@ -31,6 +31,7 @@ public class DynProxy {
 
             // before
             MyLoggerAspect.before(args);
+            MyPrintArgsAspect.before(method, args);
 
             // 調用業務方法
             result = method.invoke(object, args);
