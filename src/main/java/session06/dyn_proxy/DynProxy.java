@@ -19,7 +19,6 @@ public class DynProxy {
         this.object = object;
     }
 
-    // TODO
     // 取得 Proxy 物件
     public Object getProxy() {
         Object proxyObj = null;
@@ -31,6 +30,7 @@ public class DynProxy {
         Class<?>[] interfaces = object.getClass().getInterfaces();
 
         // 3. 處理代理的實現
+        // handler 幫忙利用反射完成方法的參數帶入，並返回值
         InvocationHandler handler = (Object proxy, Method method, Object[] args) -> {
             Object result = null;   // 被代理物件的業務方法的回傳值
 
@@ -52,7 +52,11 @@ public class DynProxy {
             result = method.invoke(object, args);
 
             // end
-            // System.out.println("do something");
+            // 示範在代理模式實現中，調整輸出結果
+            if (result != null) {
+                result = Integer.valueOf(100);
+            }
+
             return result;
         };
 
