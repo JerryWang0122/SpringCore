@@ -12,7 +12,11 @@ public class TestAOP {
 //        System.out.println(computer.add(20, 10));
 //        System.out.println(computer.sub(30, 10));
 //        System.out.println(computer.mul(50, 10));
-        System.out.println(computer.div(60, 0));
+        try {
+            System.out.println(computer.div(60, 0));
+        } catch (Exception e) {
+            System.out.println("Something is wrong");
+        }
     }
 
 }
