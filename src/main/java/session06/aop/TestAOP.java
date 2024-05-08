@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestAOP {
 
+    // 使用 java 配置在執行時要加上 VM 參數: --add-opens java.base/java.lang=ALL-UNNAMED
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("aop-config.xml");
         Computer computer = ctx.getBean("computerImpl", ComputerImpl.class);
