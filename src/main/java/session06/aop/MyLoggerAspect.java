@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
-@Component  // 可被 Spring 直接管理的物件
-@Aspect     // 告訴 Spring 此為切面程式
-@Order(1)   // 執行順序(數字越小越先執行)
+//@Component  // 可被 Spring 直接管理的物件
+//@Aspect     // 告訴 Spring 此為切面程式
+//@Order(1)   // 執行順序(數字越小越先執行)
 public class MyLoggerAspect {
 
     // 切點的方法

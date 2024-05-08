@@ -3,7 +3,7 @@ package session06.aop;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class TestAOP {
+public class TestComputerAOP {
 
     // 使用 java 配置在執行時要加上 VM 參數: --add-opens java.base/java.lang=ALL-UNNAMED
     public static void main(String[] args) {
