@@ -10,10 +10,10 @@ import java.util.Arrays;
 // 切面程式裡面放的就是公用邏輯
 public class MyLoggerAspect {
 
-    // before 前置通知
+    // before 前置通知 (Advice)
     public static void before(Object[] args) {
         System.out.println("寫入 log 程序 ...");
-        String path = "session06/dyn_proxy/log.txt";
+        String path = "src/main/java/session06/dyn_proxy/log.txt";
         String content = Arrays.toString(args);
         try {
             Files.write(    //寫入
