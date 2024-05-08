@@ -55,7 +55,7 @@ public class GuestBookApp {
                 break;
             default:
                 System.out.println("輸入錯誤，請重新輸入");
-                menu();
+//                menu();
         }
     }
 
